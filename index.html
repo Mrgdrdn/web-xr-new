@@ -21,16 +21,23 @@
                 padding: 0;
             }
         </style>
+        <script type="module">
+            import { App } from './Source/app.js';
+            document.addEventListener("DOMContentLoaded", function(){
+            const app = new App();
+            window.app = app;
+        });
+        </script>
 	</head>
 	<body>
-        <script type="module">
+        <!-- <script type="module">
 
-            import { App } from '../Source/app.js';
+            import { App } from './Source/app.js';
             document.addEventListener("DOMContentLoaded", function(){
                 const app = new App();
                 window.app = app;
             });
-        </script>
+        </script> -->
 
         <P>HEllo dsadsadsadsa</P>
 	</body>
