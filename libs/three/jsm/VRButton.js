@@ -29,7 +29,7 @@ class VRButton {
 
 				currentSession.removeEventListener( 'end', onSessionEnded );
 
-				button.textContent = 'VR нэвтрэх';
+				button.textContent = 'ENTER VR';
 
 				currentSession = null;
 
@@ -43,7 +43,7 @@ class VRButton {
 			button.style.left = 'calc(50% - 50px)';
 			button.style.width = '100px';
 
-			button.textContent = 'VR НЭВТРЭХ';
+			button.textContent = 'ENTER VR';
 
 			button.onmouseenter = function () {
 
@@ -100,7 +100,7 @@ class VRButton {
 
 			disableButton();
 
-			button.textContent = 'VR ТӨХӨӨРӨМЖ ДЭМЖИХГҮЙ БАЙНА';
+			button.textContent = 'VR NOT SUPPORTED';
 
 		}
 
