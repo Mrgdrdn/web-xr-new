@@ -53,25 +53,25 @@ class App{
         this.radius = 0.08;
         
         this.room = new THREE.LineSegments(
-					new BoxLineGeometry( 6, 6, 6, 10, 10, 10 ),
-					new THREE.LineBasicMaterial( { color: 0x808080 } )
+					new BoxLineGeometry( 10, 10, 10, 16, 16, 16 ),
+					new THREE.MeshBasicMaterial( { color: 0x101010 } )
 				);
-        this.room.geometry.translate( 0, 3, 0 );
+        this.room.geometry.translate( 0, 2, 0 );
         this.scene.add( this.room );
         
-        const geometry = new THREE.IcosahedronBufferGeometry( this.radius, 2 );
+        const geometry = new THREE.TorusGeometry( 0.4, 0.1, 10, 300 );
 
-        for ( let i = 0; i < 200; i ++ ) {
+        for ( let i = 0; i <50; i ++ ) {
 
-            const object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
+            const object = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ) );
 
-            object.position.x = this.random( -2, 2 );
-            object.position.y = this.random( -2, 2 );
-            object.position.z = this.random( -2, 2 );
-
+            object.position.x = this.random( -4, 4 );
+            object.position.y = this.random( -4, 4 );
+            object.position.z = this.random( -4, 4 );
             this.room.add( object );
-
         }
+        // 3d model
+
     }
     
     setupVR(){

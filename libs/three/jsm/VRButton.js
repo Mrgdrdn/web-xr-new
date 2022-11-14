@@ -19,7 +19,7 @@ class VRButton {
 				session.addEventListener( 'end', onSessionEnded );
 
 				await renderer.xr.setSession( session );
-				button.textContent = 'EXIT VR';
+				button.textContent = 'VR салгах';
 
 				currentSession = session;
 
@@ -29,7 +29,7 @@ class VRButton {
 
 				currentSession.removeEventListener( 'end', onSessionEnded );
 
-				button.textContent = 'ENTER VR';
+				button.textContent = 'VR нэвтрэх';
 
 				currentSession = null;
 
@@ -43,7 +43,7 @@ class VRButton {
 			button.style.left = 'calc(50% - 50px)';
 			button.style.width = '100px';
 
-			button.textContent = 'ENTER VR';
+			button.textContent = 'VR нэвтрэх';
 
 			button.onmouseenter = function () {
 
@@ -123,7 +123,7 @@ class VRButton {
 
 		if ( 'xr' in navigator ) {
 
-			button.id = 'VRButton';
+			button.id = 'VR нэвтрэх';
 			button.style.display = 'none';
 
 			stylizeElement( button );
